@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tab Icon -->
+    <link rel="icon" href="./assets/images/logo.png">
+    <!-- CSS style path -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <title>Priority - Sign In</title>
+</head>
+<body>
+    <nav class="navbar" id="navbarSign">
+        <div class="navbarBack">
+            <a href="index.html" class="navbarElement">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+            </a>
+            <a href="index.html" class="navbarElement">
+                Back 
+            </a>
+        </div>
+        <div class="navbarNext">
+            <a href="sign-up.html" class="navbarElement">Create Account</a>
+        </div>
+    </nav>
+    <main class="main" id="mainSign">
+        <br></br>
+        <br></br>
+        <div class="signContainer">
+            <div class="signHeader">
+                <img src="./assets/images/nav-logo.png" alt="Logo" id="logo-footer">
+                <a id="signHeaderText">Log into your account</a>
+            </div>
+            <form>
+                <div class="signInput" id="signInputEmail">
+                    <span id="signUserIcon" class="material-icons-outlined">mail</span>
+                    <input type="text" placeholder="E-mail" required=""/>
+                </div>
+                <div class="signInput">
+                    <span id="signLockIcon" class="material-icons">lock</span>
+                    <input type="password" placeholder="Password" id="signInputPassword" required/>
+                    <span id="signPasswordHide" class="material-icons" onclick="show_password()">visibility</span>
+                    <span id="signPasswordShow" class="material-icons" onclick="show_password()">visibility_off</span>
+                </div>
+                <button type="submit" class="signButton">Sign in</button> 
+            </form>
+            <div class="buttonContainer">
+                <button type="button">Continue with Google</button>
+                <button type="button">Continue with Apple</button>
+                <button type="button">Continue with Facebook</button>
+            </div>
+            <div class="signFooter">
+                <a href="#" class="signFooterText">Forgot password?</a>
+                <a href="#" class="signFooterText">Terms & Privacy</a>
+            </div>
+        </div>
+    </main>
+    <section class="section"></section>
+    <footer class="footer" id="footerSign"></footer>
+    <script>
+        function show_password() {
+            var password = document.getElementById("signInputPassword");
+            var hide = document.getElementById("signPasswordHide");
+            var show = document.getElementById("signPasswordShow");
+            
+            if(password.type === 'password') {
+                password.type = "text";
+                hide.style.display = "block";
+                show.style.display = "none";
+            }
+            else {
+                password.type = "password";
+                hide.style.display = "none";
+                show.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
