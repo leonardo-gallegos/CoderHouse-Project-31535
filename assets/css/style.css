@@ -35,6 +35,36 @@ body {
                         "footer footer footer";
 }
 
+.navigation {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--sidebar-color);
+    border-radius: 5px;
+    border: 2px solid #000000;
+    background-color: #fff;
+    height: 17px;
+    font-size: calc(5px + 0.25vw);
+    margin: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 3px;
+}
 .navbar {
     display: grid;
     grid-template-columns: 2fr 5fr 2fr;
@@ -223,22 +253,25 @@ body {
     width: 100%;
 }
 
-.buttonContainer button {
+.buttonContainer a {
     border-radius: 5px;
+    border: 2px solid #000000;
+    background-color: #fff;
     width: calc(210px + 10%);
     height: 45px;
     font-size: calc(12px + 0.25vw);
+    color: var(--sidebar-color);
     margin: 7px;
     font-weight: 500;
     cursor: pointer;
-}
-
-.buttonContainer button a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    color: var(--sidebar-color); 
 }
 
-.buttonContainer button:hover {
+.buttonContainer a:hover {
     transform: scale(1.03);
     transition: var(--tran-03);
 }
@@ -351,13 +384,18 @@ body {
     transition: var(--tran-03);
 }
 
+#mainInfoButton a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
 .mainInfo button:hover {
     transform: scale(1.1);
 }
 
-.mainInfo button span {
+.mainInfo button a span {
     margin-left: 11px;
-    font-size: calc(14px + 0.3vw);
+    font-size: calc(10px + 0.3vw);
 }
 
 .mainInfoElement {
@@ -368,7 +406,90 @@ body {
     flex-grow: 1;
     background-image: url(../images/banner.svg);
     background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+.mainImage a {
+    position: fixed;
+    color: #FFFFFF;
+    transition: 3s;
+}
+
+.spinner {
+    width: calc(50px + 0.5vw);
+    height: calc(50px + 0.5vw);
+    border-radius: 5px;
+    background-color: #0289f7;
+    animation: spinner-loader 3.6s infinite;
+    transition: 3000ms;
+}
+
+.mainImage:hover a {
+    color: #00000000;
+}
+
+.mainImage:hover .spinner{
+    border-radius: 50%;
+    background-color: #02ca37;
+    animation: spinner-reverse 3.6s infinite;
+    transition: 3000ms;
+}
+
+@keyframes spinner-loader {
+    0% {
+    transform: rotate(0deg);
+    }
+
+    10%, 15% {
+    transform: rotate(-90deg) scale(1.1) translateY(-100%);
+    }
+
+    20%, 25% {
+    transform: rotate(-180deg) scale(1.2) translateY(-100%);
+    }
+
+    30%, 35% {
+    transform: rotate(-270deg) scale(1.3) translateY(-100%);
+    }
+
+    40%, 50% {
+    transform: rotate(-360deg) scale(1.4) translateY(-100%);
+    }
+
+    100% {
+    transform: rotate(720deg) scale(1) translateY(-100%);
+    }
+}
+
+@keyframes spinner-reverse {
+    0% {
+    transform: rotate(0deg);
+    }
+
+    10%, 15% {
+    transform: rotate(90deg) scale(1.1) translateY(-100%);
+    }
+
+    20%, 25% {
+    transform: rotate(180deg) scale(1.2) translateY(-100%);
+    }
+
+    30%, 35% {
+    transform: rotate(270deg) scale(1.3) translateY(-100%);
+    }
+
+    40%, 50% {
+    transform: rotate(360deg) scale(1.4) translateY(-100%);
+    }
+
+    100% {
+    transform: rotate(-720deg) scale(1) translateY(-100%);
+    }
+}
+
 
 .section {
     grid-area: section;
