@@ -407,13 +407,12 @@ body {
     background-image: url(../images/banner.svg);
     background-size: cover;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .mainImage a {
-    position: fixed;
     color: #FFFFFF;
     transition: 3s;
 }
