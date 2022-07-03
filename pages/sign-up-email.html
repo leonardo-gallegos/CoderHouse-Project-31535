@@ -18,19 +18,22 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Priority - Sign Up</title>
 </head>
-<body style="background: #303030;">
-    <nav class="navbar navbar-dark navbar-expand-lg pt-3 pb-3" style="background-color: #303030;">
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg pt-3 pb-3">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-md-center container-fluid d-flex justify-items-center justify-content-start align-items-center">
-                    <li class="nav-item d-flex justify-items-center justify-content-start align-items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#fff" class="bi bi-chevron-left me-1 ms-2" viewBox="0 0 18 18">
-                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                        </svg>
-                        <a class="nav-link active" aria-current="page" href="../index.html" style="color: #ffffff">Back</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-md-center container-fluid d-flex justify-items-center justify-content-between align-items-center">
+                    <li class="nav-item d-flex justify-items-center justify-content-start align-items-center align-items-start">
+                        <i class='bx bx-chevron-left'></i>
+                        <a class="nav-link active" aria-current="page" href="../index.html">Back</a>
+                    </li>
+                    <li class="mode d-flex flex-row justify-items-center justify-content-center align-items-center align-self-start">
+                        <a class="modeText" style="text-decoration: none; margin-left: 10px;">Dark mode</a>
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
                     </li>
                 </ul>
                 <div class="btn-toolbar container-fluid d-flex justify-items-center justify-content-end" role="toolbar" aria-label="Toolbar with button groups" style="max-width:210px;">
@@ -43,25 +46,25 @@
     <main class="container-fluid d-flex flex-column justify-items-center justify-content-center align-items-center" style="min-height: 91vh;">
         <div class="container d-flex flex-column justify-items-center justify-content-center" style="width: calc(230px + 10%);">
             <div class="container d-flex flex-column justify-items-center justify-content-center align-items-center">
-                <img class="mb-5" src="../assets/images/nav-logo.png" alt="Logo">
+                <div class="mainLogo mb-4"></div>
                 <a class="fw-bold fs-4 mb-5" style="color: #fff; text-decoration: none;">Log into your account</a>
             </div>
             <form method="get" action="./dashboard.html">
                 <div class="mb-3">
-                    <label for="exampleInputFirstName1" class="form-label" style="color: #fff;">First name</label>
+                    <label for="exampleInputFirstName1" class="form-label">First name</label>
                     <input type="email" class="form-control container-fluid" id="exampleInputFirstName1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputLastName1" class="form-label" style="color: #fff;">Last name</label>
+                    <label for="exampleInputLastName1" class="form-label">Last name</label>
                     <input type="email" class="form-control container-fluid" id="exampleLastName1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" style="color: #fff;">Email address</label>
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control container-fluid" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text" style="color: #fff;">We'll never share your email with anyone else.</div>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label" style="color: #fff;">Password</label>
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
                 <button type="submit" class="btn btn-primary container-fluid" style="background: #0289f7; font-weight: 500;">Sign up</button>
@@ -71,6 +74,23 @@
             </div>
         </div>
     </main>
+    <script>
+        const body = document.querySelector('body'),
+        modeText = body.querySelector(".modeText"),
+        form = body.querySelector('form'),
+        modeSwitch = body.querySelector(".mode");
+
+        modeSwitch.addEventListener("click" , () =>{
+            body.classList.toggle("dark");
+            form.classList.toggle("dark");
+
+            if(body.classList.contains("dark")){
+                modeText.innerText = "Dark mode";
+            } else {
+                modeText.innerText = "Light mode";
+            }
+        });
+    </script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

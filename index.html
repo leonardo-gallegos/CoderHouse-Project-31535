@@ -18,35 +18,36 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Priority - Manage your data</title>
 </head>
-<body style="background: #303030;">
-    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #303030;">
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand me-3 ms-3" href="./pages/sign-in.html">
-                <img src="./assets/images/nav-logo.png" alt="" width="200" height="57">
-            </a>
+            <div class="navbar-brand me-3 ms-3" href="./pages/sign-in.html">
+                <div class="logo"></div>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-md-center container-fluid d-flex justify-items-center justify-content-center">
+                <ul class="navbar-nav me-auto mb-3 mb-lg-0 text-md-center container-fluid d-flex justify-items-center justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="sign-in.html" style="color: #ffffff">Home</a>
+                        <a class="nav-link active" aria-current="page" href="./pages/sign-in.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/sign-in.html"
-                            style="color: #ffffff">Solutions</a>
+                        <a class="nav-link" href="./pages/sign-in.html">
+                            Solutions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/sign-in.html"
-                            style="color: #ffffff">Features</a>
+                        <a class="nav-link" href="./pages/sign-in.html">
+                            Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/sign-in.html"
-                            style="color: #ffffff">Feedback</a>
+                        <a class="nav-link" href="./pages/sign-in.html">
+                            Feedback</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/sign-in.html"
-                            style="color: #ffffff">Contact Us</a>
+                    <li class="mode d-flex flex-row justify-items-center justify-content-center align-items-center align-self-start">
+                        <a class="modeText" style="text-decoration: none; margin-left: 10px;">Dark mode</a>
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
                     </li>
                 </ul>
                 <div class="btn-toolbar container-fluid d-flex justify-items-center justify-content-center" role="toolbar" aria-label="Toolbar with button groups" style="max-width:210px;">
@@ -60,15 +61,15 @@
     </nav>
     <main class="main">
         <div class="container-fluid d-flex flex-wrap mt-5" id="mainContainer1" style="min-height: 58vh;">
-            <div class="container d-flex flex-column flex-grow-1 justify-items-center justify-content-center me-2 ms-2" id="mainContainerChild1" style="min-width: 350px; flex-basis: 0;">
+            <div class="container d-flex flex-column flex-grow-1 justify-items-center justify-content-center me-2 ms-2" style="min-width: 350px; flex-basis: 0;">
                 <div class="container d-flex flex-column ms-1 me-1 mb-2">
-                    <a class="fw-bold fs-1" style="color: #fff; text-decoration: none;">Manage and control your data</a>
+                    <a class="fw-bold fs-1">Manage and control your data</a>
                 </div>
-                <div class="container d-flex flex-column ms-1 me-1 mb-2" style="color: #fff;">
-                    <a class="fw-bold fs-2" style="color: #fff; text-decoration: none;">The power of business intelligence in your hands</a> 
+                <div class="container d-flex flex-column ms-1 me-1 mb-2">
+                    <a class="fw-bold fs-2">The power of business intelligence in your hands</a> 
                 </div>
-                <div class="container d-flex flex-column ms-1 me-1 mb-2" style="color: #fff;">
-                    <p class="fs-5" style="color: #fff; text-decoration: none;">Priority helps people transform data into 
+                <div class="container d-flex flex-column ms-1 me-1 mb-2">
+                    <p class="fs-5">Priority helps people transform data into 
                         actionable insights. Explore with limitless 
                         visual analytics. Build dashboards and perform 
                         ad hoc analyses in just a few clicks. Share your
@@ -79,42 +80,42 @@
                         style="background: #0289f7; width:fit-content;">Learn more</a>
 
             </div>
-            <div class="container d-flex flex-wrap flex-shrink-1 flex-grow-1 ms-5 me-5 mt-5" id="mainContainerChild2" style="min-width: 350px; min-height: 333px; background-image: url(./assets/images/banner.svg); background-size: cover; flex-basis: 300px;">
+            <div class="image container d-flex flex-wrap flex-shrink-1 flex-grow-1 ms-5 me-5 mt-5">
             </div>
         </div>
         <div class="container-fluid d-flex flex-wrap justify-items-center justify-content-center p-5 gap-3" id="mainContainer2" style="min-height: 15vh;">
-            <div class="card d-flex flex-column justify-items-center justify-content-center align-items-center" style="background:#404040; width: calc(220px + 15vw);">
-                <i class='bx bx-pulse bx-lg' style='color:#ffffff; margin-top: 20px;'></i>
+            <div class="card d-flex flex-column justify-items-center justify-content-center align-items-center" style="width: calc(220px + 15vw);">
+                <i class='bx bx-pulse bx-lg'></i>
                 <div class="card-body d-flex flex-column justify-items-center justify-content-center align-items-center">
-                    <h5 class="card-title" style="color: #ffffff;">Fast Analytics</h5>
-                    <p class="card-text" style="color: #ffffff;">Connect and visualize your data in minutes. Priority is 10 to 100x faster than existing solutions.</p>
+                    <h5 class="card-title">Fast Analytics</h5>
+                    <p class="card-text">Connect and visualize your data in minutes. Priority is 10 to 100x faster than existing solutions.</p>
                     <a class="btn btn-primary m-1" href="./pages/sign-in.html" role="button"
                     style="background: #0289f7">About</a>
                 </div>
             </div>
-            <div class="card d-flex flex-column justify-items-center justify-content-center align-items-center" style="background:#404040; width: calc(220px + 15vw);">
-                <i class='bx bx-bar-chart-square bx-lg' style='color:#ffffff; margin-top: 20px;'></i>
+            <div class="card d-flex flex-column justify-items-center justify-content-center align-items-center" style="width: calc(220px + 15vw);">
+                <i class='bx bx-bar-chart-square bx-lg'></i>
                 <div class="card-body d-flex flex-column justify-items-center justify-content-center align-items-center">
-                    <h5 class="card-title" style="color: #ffffff;">Smart Dashboards</h5>
-                    <p class="card-text" style="color: #ffffff;">Combine multiple views of data to get richer insight. Best practices of data visualization are baked right in.</p>
+                    <h5 class="card-title">Smart Dashboards</h5>
+                    <p class="card-text">Combine multiple views of data to get richer insight. Best practices of data visualization are baked right in.</p>
                     <a class="btn btn-primary m-1" href="./pages/sign-in.html" role="button"
                     style="background: #0289f7">About</a>
                 </div>
             </div>
-            <div class="card d-flex flex-column justify-items-center justify-content-center align-items-center" style="background:#404040; width: calc(220px + 15vw);">
-                <i class='bx bx-data bx-lg' style='color:#ffffff; margin-top: 20px;'></i>
+            <div class="card d-flex flex-column justify-items-center justify-content-center align-items-center" style="width: calc(220px + 15vw);">
+                <i class='bx bx-data bx-lg'></i>
                 <div class="card-body d-flex flex-column justify-items-center justify-content-center align-items-center">
-                    <h5 class="card-title" style="color: #ffffff;">Big Data, Any Data</h5>
-                    <p class="card-text" style="color: #ffffff;">Get the freshest data with a live connection to your data or get automatic updates on a schedule you define.</p>
+                    <h5 class="card-title">Big Data, Any Data</h5>
+                    <p class="card-text">Get the freshest data with a live connection to your data or get automatic updates on a schedule you define.</p>
                     <a class="btn btn-primary m-1" href="./pages/sign-in.html" role="button"
                     style="background: #0289f7">About</a>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="container-fluid d-flex flex-column pt-5" style="background: #202020">
-        <div class="containe-fluid ms-3 me-3">
-            <img src="./assets/images/nav-logo.png" alt="Logo">
+    <footer class="footer container-fluid d-flex flex-column pt-5">
+        <div class="container-fluid ms-3 me-3">
+            <img src="./assets/images/nav-logo-dark.png" alt="Logo">
         </div>
         <div class="container-fluid d-flex flex-column mt-2 mb-3 ms-1 me-1">
             <a style="color: #fff; text-decoration: none;">Bernini 149</a>
@@ -134,8 +135,22 @@
         <div class="container-fluid d-flex flex-column justify-items-center justify-content-center align-items-center">
             <a class="mt-5" style="color: #fff; text-decoration: none;">Copyright © 2022 Priority | All rights reserved</a>
             <a class="mb-2" style="color: #fff; text-decoration: none;">Made with <i class="fa fa-heart" style="color: red;"></i> from Peru</a>
-        </div>                
+        </div>         
     </footer>
+    <script>
+        const body = document.querySelector('body'),
+        modeText = body.querySelector(".modeText"),
+        modeSwitch = body.querySelector(".mode");
+
+        modeSwitch.addEventListener("click" , () =>{
+            body.classList.toggle("dark");
+            if(body.classList.contains("dark")){
+                modeText.innerText = "Dark mode";
+            } else {
+                modeText.innerText = "Light mode";
+            }
+        });
+    </script>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

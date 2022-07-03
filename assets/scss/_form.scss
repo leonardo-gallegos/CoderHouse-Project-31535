@@ -1,0 +1,117 @@
+.mainLogo {
+    background-image: $nav-logo-dark;
+    background-size: cover;
+    min-width: 200px;
+    min-height: 57px;
+}
+
+.mainLogo.dark {
+    background-image: $nav-logo-light;
+    background-size: cover;
+    min-width: 200px;
+    min-height: 57px;
+}
+
+.mainText {
+    color: $text-color-dark;
+    text-decoration: none;
+    &:hover {
+        color: $text-color-dark;
+    }
+}
+
+.mainText.dark{
+    color: $text-color-light;
+    text-decoration: none;
+    &:hover {
+        color: $text-color-light;
+    }
+}
+
+.mainForgot {
+    color: $text-color-dark;
+    text-decoration: none;
+    &:hover {
+        color: $text-color-dark;
+    }
+}
+
+.mainForgot.dark{
+    color: $text-color-light;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover {
+        color: $text-color-light;
+    }
+}
+
+.mainTerms {
+    color: $text-color-dark;
+    text-decoration: none;
+    &:hover {
+        color: $text-color-dark;
+    }
+}
+
+.mainTerms.dark{
+    color: $text-color-light;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover {
+        color: $text-color-light;
+    }
+}
+
+.mainPrivacy {
+    color: $text-color-dark;
+    text-decoration: none;
+    &:hover {
+        color: $text-color-dark;
+    }
+}
+
+.mainPrivacy.dark{
+    color: $text-color-light;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover {
+        color: $text-color-light;
+    }
+}
+
+form {
+    .mb-3 {
+        .form-label {
+            color: $text-color-dark;
+            text-decoration: none;
+        }
+        .form-text {
+            color: $text-color-dark;
+            text-decoration: none;
+        }
+        .form-check-label {
+            color: $text-color-dark;
+            text-decoration: none;
+        }
+    }
+}
+
+form.dark {
+    .mb-3 {
+        .form-label {
+            color: $text-color-light;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .form-text {
+            color: $text-color-light;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .form-check-label {
+            color: $text-color-light;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    }   
+}
