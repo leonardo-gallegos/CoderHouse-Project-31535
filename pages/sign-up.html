@@ -46,7 +46,7 @@
     <main class="main container-fluid d-flex flex-column justify-items-center justify-content-center align-items-center" style="min-height: 91vh;">
         <div class="container d-flex flex-column justify-items-center justify-content-center" style="width: calc(230px + 10%);">
             <div class="container d-flex flex-column justify-items-center justify-content-center align-items-center">
-                <div class="mainLogo mb-4"></div>
+                <div class="mb-4"></div>
                 <a class="mainText fw-bold fs-4 mb-5">Log into your account</a>
             </div>
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -67,16 +67,16 @@
     <script>
         const body = document.querySelector('body'),
         modeText = body.querySelector(".modeText"),
-        mainText = body.querySelector(".mainText"),
+        mainText = body.querySelector('.mainText'),
         mainPrivacy = body.querySelector(".mainPrivacy"),
-        mainLogo = body.querySelector(".mainLogo"),
+        mb4 = body.querySelector('.mb-4'),
         modeSwitch = body.querySelector(".mode");
 
         modeSwitch.addEventListener("click" , () =>{
             body.classList.toggle("dark");
             mainText.classList.toggle("dark");
             mainPrivacy.classList.toggle("dark");
-            mainLogo.classList.toggle("dark");
+            mb4.classList.toggle("dark");
             if(body.classList.contains("dark")){
                 modeText.innerText = "Dark mode";
             } else {

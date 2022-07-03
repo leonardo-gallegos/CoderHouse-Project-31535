@@ -46,8 +46,8 @@
     <main class="container-fluid d-flex flex-column justify-items-center justify-content-center align-items-center" style="min-height: 91vh;">
         <div class="container d-flex flex-column justify-items-center justify-content-center" style="width: calc(230px + 10%);">
             <div class="container d-flex flex-column justify-items-center justify-content-center align-items-center">
-                <div class="mainLogo mb-4"></div>
-                <a class="fw-bold fs-4 mb-5" style="color: #fff; text-decoration: none;">Log into your account</a>
+                <div class="mb-4"></div>
+                <a class="mainText fw-bold fs-4 mb-5">Log into your account</a>
             </div>
             <form method="get" action="./dashboard.html">
                 <div class="mb-3">
@@ -77,12 +77,16 @@
     <script>
         const body = document.querySelector('body'),
         modeText = body.querySelector(".modeText"),
+        mainText = body.querySelector('.mainText'),
         form = body.querySelector('form'),
+        mb4 = body.querySelector('.mb-4'),
         modeSwitch = body.querySelector(".mode");
 
         modeSwitch.addEventListener("click" , () =>{
             body.classList.toggle("dark");
             form.classList.toggle("dark");
+            mb4.classList.toggle("dark");
+            mainText.classList.toggle("dark");
 
             if(body.classList.contains("dark")){
                 modeText.innerText = "Dark mode";

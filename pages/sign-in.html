@@ -84,9 +84,9 @@
         modeText = body.querySelector(".modeText"),
         mainText = body.querySelector(".mainText"),
         form = body.querySelector('form'),
+        mb4 = body.querySelector('.mb-4'),
         mainForgot = body.querySelector(".mainForgot"),
         mainTerms = body.querySelector(".mainTerms"),
-        mainLogo = body.querySelector(".mainLogo"),
         modeSwitch = body.querySelector(".mode");
 
         modeSwitch.addEventListener("click" , () =>{
@@ -95,7 +95,7 @@
             form.classList.toggle("dark");
             mainForgot.classList.toggle("dark");
             mainTerms.classList.toggle("dark");
-            mainLogo.classList.toggle("dark");
+            mb4.classList.toggle("dark");
             if(body.classList.contains("dark")){
                 modeText.innerText = "Dark mode";
             } else {
