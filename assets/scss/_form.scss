@@ -1,117 +1,83 @@
-.mb-4 {
-    background-image: $nav-logo-dark;
+@import "_variables.scss";
+
+@mixin text-light-mode {
+    color: map-get($light-mode, text-color-dark);
+    text-decoration: none;
+    &:hover {
+        color: map-get($light-mode, text-color-dark);
+    }
+}
+
+@mixin text-dark-mode {
+    color: map-get($dark-mode, text-color-light);
+    text-decoration: none;
+    &:hover {
+        color: map-get($dark-mode, text-color-light);
+    }
+    font-weight: 500;
+}
+
+.logo {
     background-size: cover;
     min-width: 200px;
     min-height: 57px;
 }
 
-.mb-4.dark {
-    background-image: $nav-logo-light;
-    background-size: cover;
-    min-width: 200px;
-    min-height: 57px;
+.mainLogo {
+    @extend .logo;
+    background-image: map-get($light-mode, nav-logo-dark);
+    
 }
 
-.mainText {
-    color: $text-color-dark;
-    text-decoration: none;
-    &:hover {
-        color: $text-color-dark;
-    }
+.mainLogo.dark {
+    @extend .logo;
+    background-image: map-get($dark-mode, nav-logo-light);
 }
 
-.mainText.dark{
-    color: $text-color-light;
-    text-decoration: none;
-    &:hover {
-        color: $text-color-light;
-    }
-}
+$textElement:(
+    mainText,
+    mainForgot,
+    mainTerms,
+    mainPrivacy
+);
 
-.mainForgot {
-    color: $text-color-dark;
-    text-decoration: none;
-    &:hover {
-        color: $text-color-dark;
-    }
-}
-
-.mainForgot.dark{
-    color: $text-color-light;
-    text-decoration: none;
-    font-weight: 500;
-    &:hover {
-        color: $text-color-light;
-    }
-}
-
-.mainTerms {
-    color: $text-color-dark;
-    text-decoration: none;
-    &:hover {
-        color: $text-color-dark;
-    }
-}
-
-.mainTerms.dark{
-    color: $text-color-light;
-    text-decoration: none;
-    font-weight: 500;
-    &:hover {
-        color: $text-color-light;
-    }
-}
-
-.mainPrivacy {
-    color: $text-color-dark;
-    text-decoration: none;
-    &:hover {
-        color: $text-color-dark;
-    }
-}
-
-.mainPrivacy.dark{
-    color: $text-color-light;
-    text-decoration: none;
-    font-weight: 500;
-    &:hover {
-        color: $text-color-light;
+@each $var in $textElement {
+    .#{$var} {
+        @include text-light-mode();
+    }   
+    .#{$var}.dark {
+        @include text-dark-mode();
     }
 }
 
 form {
     .mb-3 {
-        .form-label {
-            color: $text-color-dark;
-            text-decoration: none;
-        }
-        .form-text {
-            color: $text-color-dark;
-            text-decoration: none;
-        }
-        .form-check-label {
-            color: $text-color-dark;
-            text-decoration: none;
+        $formText:(
+            form-label,
+            form-text,
+            form-check-label
+        );
+
+        @each $var in $formText {
+            .#{$var} {
+                @include text-light-mode();
+            }
         }
     }
 }
 
 form.dark {
     .mb-3 {
-        .form-label {
-            color: $text-color-light;
-            text-decoration: none;
-            font-weight: 500;
+        $formText:(
+            form-label,
+            form-text,
+            form-check-label
+        );
+
+        @each $var in $formText {
+            .#{$var} {
+                @include text-dark-mode();
+            }
         }
-        .form-text {
-            color: $text-color-light;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .form-check-label {
-            color: $text-color-light;
-            text-decoration: none;
-            font-weight: 500;
-        }
-    }   
+    }
 }

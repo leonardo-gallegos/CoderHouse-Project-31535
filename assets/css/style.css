@@ -4,13 +4,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1b6; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #777777;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f1f1f1b6; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3d3d; }
 
 body {
   background: #303030; }
   body .navbar {
     background: #303030; }
-    body .navbar .container-fluid .navbar-brand .logo {
+    body .navbar .container-fluid .navbar-brand .logo, body .navbar .container-fluid .navbar-brand .mainLogo {
       background-image: url(../images/nav-logo-dark.png);
       background-size: cover;
       min-width: 200px;
@@ -41,9 +61,10 @@ body {
         color: #ffffff; }
       body .navbar .container-fluid .collapse ul .mode i.moon {
         display: none; }
-  body .main .container-fluid .container .container a {
+  body .main .container-fluid .container .container h1, body .main .container-fluid .container .container h2 {
     color: #ffffff;
-    text-decoration: none; }
+    text-decoration: none;
+    overflow: hidden; }
   body .main .container-fluid .container .container p {
     color: #ffffff; }
   body .main .container-fluid .image {
@@ -61,7 +82,8 @@ body {
       color: #ffffff;
       margin-top: 20px; }
     body .main .container-fluid .card .card-body h5 {
-      color: #ffffff; }
+      color: #ffffff;
+      overflow: hidden; }
     body .main .container-fluid .card .card-body p {
       color: #ffffff; }
   body .footer {
@@ -71,7 +93,7 @@ body.dark {
   background: #b3b3b3; }
   body.dark .navbar {
     background: #b3b3b3; }
-    body.dark .navbar .container-fluid .navbar-brand .logo {
+    body.dark .navbar .container-fluid .navbar-brand .logo, body.dark .navbar .container-fluid .navbar-brand .mainLogo {
       background-image: url(../images/nav-logo-light.png); }
     body.dark .navbar .container-fluid .collapse ul li a {
       color: #222222;
@@ -89,7 +111,7 @@ body.dark {
         color: #222222; }
       body.dark .navbar .container-fluid .collapse ul .mode i.sun {
         display: none; }
-  body.dark .main .container-fluid .container .container a {
+  body.dark .main .container-fluid .container .container h1, body.dark .main .container-fluid .container .container h2 {
     color: #222222; }
   body.dark .main .container-fluid .container .container p {
     color: #222222; }
@@ -103,23 +125,23 @@ body.dark {
       color: #222222;
       margin-top: 20px; }
     body.dark .main .container-fluid .card .card-body h5 {
-      color: #222222; }
+      color: #222222;
+      overflow: hidden; }
     body.dark .main .container-fluid .card .card-body p {
       color: #222222; }
   body.dark .footer {
     background: #646464; }
 
-.mb-4 {
-  background-image: url(../images/nav-logo-dark.png);
+.logo, .mainLogo, .mainLogo.dark {
   background-size: cover;
   min-width: 200px;
   min-height: 57px; }
 
-.mb-4.dark {
-  background-image: url(../images/nav-logo-light.png);
-  background-size: cover;
-  min-width: 200px;
-  min-height: 57px; }
+.mainLogo {
+  background-image: url(../images/nav-logo-dark.png); }
+
+.mainLogo.dark {
+  background-image: url(../images/nav-logo-light.png); }
 
 .mainText {
   color: #ffffff;
@@ -129,7 +151,8 @@ body.dark {
 
 .mainText.dark {
   color: #222222;
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: 500; }
   .mainText.dark:hover {
     color: #222222; }
 
@@ -175,26 +198,38 @@ body.dark {
 form .mb-3 .form-label {
   color: #ffffff;
   text-decoration: none; }
+  form .mb-3 .form-label:hover {
+    color: #ffffff; }
 
 form .mb-3 .form-text {
   color: #ffffff;
   text-decoration: none; }
+  form .mb-3 .form-text:hover {
+    color: #ffffff; }
 
 form .mb-3 .form-check-label {
   color: #ffffff;
   text-decoration: none; }
+  form .mb-3 .form-check-label:hover {
+    color: #ffffff; }
 
 form.dark .mb-3 .form-label {
   color: #222222;
   text-decoration: none;
   font-weight: 500; }
+  form.dark .mb-3 .form-label:hover {
+    color: #222222; }
 
 form.dark .mb-3 .form-text {
   color: #222222;
   text-decoration: none;
   font-weight: 500; }
+  form.dark .mb-3 .form-text:hover {
+    color: #222222; }
 
 form.dark .mb-3 .form-check-label {
   color: #222222;
   text-decoration: none;
   font-weight: 500; }
+  form.dark .mb-3 .form-check-label:hover {
+    color: #222222; }

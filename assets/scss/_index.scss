@@ -1,11 +1,13 @@
+@import "_variables.scss";
+
 body {
-    background: $body-color-dark;
+    background: map-get($light-mode, body-color-dark);
     .navbar {
-        background: $body-color-dark;
+        background: map-get($light-mode, body-color-dark);
         .container-fluid {
             .navbar-brand {
                 .logo {
-                    background-image: $nav-logo-dark;
+                    background-image: map-get($light-mode, nav-logo-dark);
                     background-size: cover;
                     min-width: 200px;
                     min-height: 57px;
@@ -16,21 +18,21 @@ body {
                     li {
                         align-self: start;
                         a {
-                            color: $text-color-dark;
+                            color: map-get($light-mode, text-color-dark);
                         }
                         i {
-                            color: $text-color-dark;
+                            color: map-get($light-mode, text-color-dark);
                         }
                     }
                     .mode {
-                        background: $plus-color-dark;
+                        background: map-get($light-mode, plus-color-dark);
                         border-radius: 5px;
                         max-width: 200px;
                         align-self: start;
                         cursor: pointer;
                         margin-top: 2px;
                         a {
-                            color: $text-color-dark;
+                            color: map-get($light-mode, text-color-dark);
                             text-decoration: none;
                             margin-left: 10px;
                             margin-top: 7px;
@@ -41,7 +43,7 @@ body {
                         }
                         i.sun {
                             display: block;
-                            color: $text-color-dark;
+                            color: map-get($light-mode, text-color-dark);
                         }
                         i.moon {
                             display: none;
@@ -55,38 +57,40 @@ body {
         .container-fluid {
             .container {
                 .container {
-                    a {
-                        color: $text-color-dark;
+                    h1, h2 {
+                        color: map-get($light-mode, text-color-dark);
                         text-decoration: none;
+                        overflow: hidden;
                     }
                     p {
-                        color: $text-color-dark;
+                        color: map-get($light-mode, text-color-dark);
                     }
                 }
             }
             .image {
                 min-width: 350px; 
                 min-height: 333px; 
-                background-image: $image-dark; 
+                background-image: map-get($light-mode, image-dark); 
                 background-size: cover; 
                 flex-basis: 300px;
             }
             .card {
-                background: $plus-color-dark;
+                background: map-get($light-mode, plus-color-dark);
                 &:hover {
                     box-shadow: 0 8px 22px 0 #000000bb;
                     transform: scale(1.01);
                 }
                 i {
-                    color: $text-color-dark;
+                    color: map-get($light-mode, text-color-dark);
                     margin-top: 20px;
                 }
                 .card-body {
                     h5 {
-                        color: $text-color-dark;
+                        color: map-get($light-mode, text-color-dark);
+                        overflow: hidden;
                     }
                     p {
-                        color: $text-color-dark;
+                        color: map-get($light-mode, text-color-dark);
                     }
 
                 }
@@ -94,41 +98,41 @@ body {
         }
     }
     .footer {
-        background: $accent-color-dark;
+        background: map-get($light-mode, accent-color-dark);
     }
 }
 
 body.dark{
-    background: $body-color-light;
+    background: map-get($dark-mode, body-color-light);
     .navbar {
-        background: $body-color-light;
+        background: map-get($dark-mode, body-color-light);
         .container-fluid {
             .navbar-brand {
                 .logo {
-                    background-image: $nav-logo-light;
+                    background-image: map-get($dark-mode, nav-logo-light);
                 }
             }
             .collapse {
                 ul {
                     li {
                         a {
-                            color: $text-color-light;
+                            color: map-get($dark-mode, text-color-light);
                             font-weight: 500;
                         }
                         i {
-                            color: $text-color-light;
+                            color: map-get($dark-mode, text-color-light);
                             font-weight: 700;
                         }
                     }
                     .mode {
-                        background: $plus-color-light;
+                        background: map-get($dark-mode, plus-color-light);
                         align-self: start;
                         a {
-                            color: $text-color-light;
+                            color: map-get($dark-mode, text-color-light);
                         }
                         i.moon {
                             display: block;
-                            color: $text-color-light;
+                            color: map-get($dark-mode, text-color-light);
                         }
                         i.sun {
                             display: none;
@@ -142,32 +146,33 @@ body.dark{
         .container-fluid {
             .container {
                 .container {
-                    a {
-                        color: $text-color-light;
+                    h1, h2 {
+                        color: map-get($dark-mode, text-color-light);
                     }
                     p {
-                        color: $text-color-light;
+                        color: map-get($dark-mode, text-color-light);
                     }
                 }
             }
             .image {
-                background-image: $image-light;
+                background-image: map-get($dark-mode, image-light);
             }
             .card {
-                background: $plus-color-light;
+                background: map-get($dark-mode, plus-color-light);
                 &:hover {
                     box-shadow: 0 8px 22px 0 #00000050;
                 }
                 i {
-                    color: $text-color-light;
+                    color: map-get($dark-mode, text-color-light);
                     margin-top: 20px;
                 }
                 .card-body {
                     h5 {
-                        color: $text-color-light;
+                        color: map-get($dark-mode, text-color-light);
+                        overflow: hidden;
                     }
                     p {
-                        color: $text-color-light;
+                        color: map-get($dark-mode, text-color-light);
                     }
 
                 }
@@ -175,6 +180,6 @@ body.dark{
         }
     }
     .footer {
-        background: $accent-color-light;
+        background: map-get($dark-mode, accent-color-light);
     }
 }

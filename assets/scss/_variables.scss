@@ -1,18 +1,22 @@
 // Colors light
-$body-color-dark: #303030;
-$plus-color-dark: #404040;
-$accent-color-dark: #202020;
-$text-color-dark: #ffffff;
-$image-dark: url(../images/banner-dark.svg);
-$nav-logo-dark: url(../images/nav-logo-dark.png);
+$light-mode: (
+    body-color-dark: #303030,
+    plus-color-dark: #404040,
+    accent-color-dark: #202020,
+    text-color-dark: #ffffff,
+    image-dark: url(../images/banner-dark.svg),
+    nav-logo-dark: url(../images/nav-logo-dark.png),
+);
 
 // Colors dark
-$body-color-light: #b3b3b3;
-$plus-color-light: #cfcfcf;
-$accent-color-light: #646464;
-$text-color-light: #222222;
-$image-light: url(../images/banner-light.svg);
-$nav-logo-light: url(../images/nav-logo-light.png);
+$dark-mode: (
+    body-color-light: #b3b3b3,
+    plus-color-light: #cfcfcf,
+    accent-color-light: #646464,
+    text-color-light: #222222,
+    image-light: url(../images/banner-light.svg),
+    nav-logo-light: url(../images/nav-logo-light.png),
+);
 
 // Transitions
 $tran-03: all 0.3s ease;

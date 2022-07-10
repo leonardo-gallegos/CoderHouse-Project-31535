@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS style path -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Priority - Sign In</title>
+    <title>Sign In</title>
+    <meta name="keywords" content="Dashboard, Database, BI, Business Intelligence">
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg pt-3 pb-3">
@@ -84,7 +85,7 @@
         modeText = body.querySelector(".modeText"),
         mainText = body.querySelector(".mainText"),
         form = body.querySelector('form'),
-        mb4 = body.querySelector('.mb-4'),
+        mainLogo = body.querySelector('.mainLogo'),
         mainForgot = body.querySelector(".mainForgot"),
         mainTerms = body.querySelector(".mainTerms"),
         modeSwitch = body.querySelector(".mode");
@@ -95,7 +96,7 @@
             form.classList.toggle("dark");
             mainForgot.classList.toggle("dark");
             mainTerms.classList.toggle("dark");
-            mb4.classList.toggle("dark");
+            mainLogo.classList.toggle("dark");
             if(body.classList.contains("dark")){
                 modeText.innerText = "Dark mode";
             } else {
