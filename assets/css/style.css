@@ -369,12 +369,20 @@ body {
         color: #ffffff; }
       body .navbar .container-fluid .collapse ul .mode i.moon {
         display: none; }
-  body .main .container-fluid .container .container h1, body .main .container-fluid .container .container h2 {
-    color: #ffffff;
-    text-decoration: none;
-    overflow: hidden; }
-  body .main .container-fluid .container .container p {
-    color: #ffffff; }
+  body .main .container-fluid .container .container {
+    animation: 1s ease-out 0s 1 slideInFromLeft; }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-70%); }
+  100% {
+    transform: translateX(0); } }
+    body .main .container-fluid .container .container h1, body .main .container-fluid .container .container h2 {
+      color: #ffffff;
+      text-decoration: none;
+      overflow: hidden; }
+    body .main .container-fluid .container .container p {
+      color: #ffffff; }
   body .main .container-fluid .image {
     min-width: 350px;
     min-height: 333px;

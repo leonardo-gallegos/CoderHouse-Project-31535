@@ -57,6 +57,15 @@ body {
         .container-fluid {
             .container {
                 .container {
+                    @keyframes slideInFromLeft {
+                        0% {
+                            transform: translateX(-70%);
+                        }
+                        100% {
+                            transform: translateX(0);
+                        }
+                    }
+                    animation: 1s ease-out 0s 1 slideInFromLeft;
                     h1, h2 {
                         color: map-get($light-mode, text-color-dark);
                         text-decoration: none;
