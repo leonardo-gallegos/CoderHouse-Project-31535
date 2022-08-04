@@ -348,10 +348,7 @@ body.dark .home .homeContent .cardContainer .card {
 
 body.dark .home .cardContainer .card {
     background-color: map-get($dark-mode, accent-color-light);
-    #myChart {
-        justify-self: center;
-    }
-
+    
     $chartElement:(
         myChart,
         myChart1,

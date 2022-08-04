@@ -294,8 +294,6 @@ body.dark .home .homeContent .cardContainer .card {
 
 body.dark .home .cardContainer .card {
   background-color: #646464; }
-  body.dark .home .cardContainer .card #myChart {
-    justify-self: center; }
   body.dark .home .cardContainer .card #myChart text {
     fill: #222222; }
   body.dark .home .cardContainer .card #myChart path {
