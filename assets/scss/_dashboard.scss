@@ -9,14 +9,37 @@
     padding: 10px 10px;
     background: map-get($light-mode, plus-color-dark);
     transition: $tran-05;
-    z-index: 100;  
+    z-index: 1;
+    overflow-x: visible;
+}
+
+body.dark .sidebar {
+    background: map-get($dark-mode, plus-color-light);
+}
+
+.sidebarPriority {
+    font-size: calc(17px + 0.2vw);
+    font-weight: 700;
+}
+
+.sidebarWelcome {
+    font-size: calc(11px + 0.2vw);
+    font-weight: 500;
+}
+
+body.dark .sidebar .sidebarLogo .sidebarTitle .sidebarPriority {
+    color: map-get($dark-mode, text-color-light);
+}
+
+body.dark .sidebar .sidebarLogo .sidebarTitle .sidebarWelcome {
+    color: map-get($dark-mode, text-color-light);
 }
 
 .sidebar.close {
     width: 80px;
 }
 
-.sidebar li{
+.sidebar li {
     height: 50px;
     list-style: none;
     display: flex;
@@ -24,13 +47,12 @@
     margin-top: 10px;
 }
 
-.sidebar header .sidebarImage,
-.sidebar .icon{
+.sidebar header .sidebarImage {
     min-width: 60px;
     border-radius: 6px;
 }
 
-.sidebar .icon{
+.sidebar .icon {
     min-width: 60px;
     border-radius: 6px;
     height: 100%;
@@ -40,14 +62,47 @@
     font-size: 20px;
 }
 
+.sidebar .sidebarMenu .sidebarMenuList span {
+    font-size: calc(13px + 0.2vw);
+    margin-left: 4px;
+}
+
 .sidebar .sidebarText,
-.sidebar .icon{
+.sidebar .icon {
     color: map-get($light-mode, text-color-dark);
     transition: $tran-03;
 }
 
+body.dark .sidebar .sidebarText,
+body.dark .sidebar .icon{
+    color: map-get($dark-mode, text-color-light);
+}
+
+.sidebar .sidebarMenu .bottom-content .logout a span {
+    font-size: calc(13px + 0.2vw);
+    margin-left: 4px;
+}
+
+.sidebar .sidebarMenu .bottom-content .mode span {
+    font-size: calc(13px + 0.2vw);
+    margin-left: 4px;
+}
+
+.sidebar .sidebarMenu .bottom-content .mode {
+    border-radius: 6px;
+    background-color: map-get($dark-mode, text-color-light);
+    position: relative;
+    transition: $tran-05;
+}
+
+body.dark .sidebar .sidebarMenu .bottom-content .mode{
+    background-color: map-get($light-mode, text-color-dark);
+}
+
 .sidebar .sidebarText {
-    font-size: 17px;
+    margin-left: 14px;
+    font-size: calc(12px + 0.3vw);
+    color: map-get($light-mode, text-color-dark);
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
@@ -57,18 +112,20 @@
     opacity: 0;
 }
 
-.sidebar header{
+.sidebar header {
     position: relative;
+    overflow-x: visible;
 }
 
-.sidebar header .sidebarLogo{
+.sidebar header .sidebarLogo {
     display: flex;
     align-items: center;
 }
 
-#sidebarTitle{
+.sidebarTitle {
     display: flex;
     flex-direction: column;
+    color: map-get($light-mode, text-color-dark);
 }
 
 header .sidebarLogo .name {
@@ -77,43 +134,41 @@ header .sidebarLogo .name {
     font-weight: 600;
 }
 
-header .sidebarLogo .profession{
+header .sidebarLogo .profession {
     font-size: 16px;
     margin-top: -2px;
     display: block;
 }
 
-.sidebar header .sidebarImage{
+.sidebar header .sidebarImage {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar header .sidebarImage img{
+.sidebar header .sidebarImage img {
     width: 40px;
     border-radius: 6px;
 }
 
-.sidebar header .toggle{
+.sidebar header .toggle {
     position: absolute;
     top: 50%;
-    right: -25px;
+    right: -20px;
     transform: translateY(-50%) rotate(180deg);
     height: 25px;
     width: 25px;
-    background-color: map-get($light-mode, primary-color-dark);
-    color: map-get($light-mode, plus-color-dark);
+    background-color: map-get($dark-mode, primary-color-light);
+    color: map-get($dark-mode, plus-color-light);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 25px;
     cursor: pointer;
-    transition: var(--tran-05);
-}
-
-body.dark .sidebar header .toggle{
-    color: var(--text-color);
+    transition: $tran-05;
+    display: block;
+    z-index: 1;
 }
 
 .sidebar.close .toggle{
@@ -124,11 +179,15 @@ body.dark .sidebar header .toggle{
     margin-top: 40px;
 }
 
+.sidebar .sidebarMenuList ul {
+    padding-left: 0;
+}
+
 .sidebar .sidebarMenuSearch{
     border-radius: 6px;
     background-color: map-get($dark-mode, body-color-light);
     cursor: pointer;
-    transition: var(--tran-05);
+    transition: $tran-05;
 }
 
 .sidebar .sidebarMenuSearch input{
@@ -140,7 +199,7 @@ body.dark .sidebar header .toggle{
     border-radius: 6px;
     font-size: 17px;
     font-weight: 500;
-    transition: var(--tran-05);
+    transition: $tran-05;
 }
 
 .sidebar li a{
@@ -153,21 +212,16 @@ body.dark .sidebar header .toggle{
     width: 100%;
     border-radius: 6px;
     text-decoration: none;
-    transition: var(--tran-03);
+    transition: $tran-03;
 }
 
 .sidebar li a:hover{
-    background-color: var(--primary-color);
+    background-color: map-get($dark-mode, primary-color-light);
 }
 
 .sidebar li a:hover .icon,
 .sidebar li a:hover .sidebarText{
-    color: var(--sidebar-color);
-}
-
-body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .sidebarText{
-    color: var(--text-color);
+    color: map-get($dark-mode, plus-color-light);
 }
 
 .sidebar .sidebarMenu{
@@ -186,7 +240,7 @@ body.dark .sidebar li a:hover .sidebarText{
     border-radius: 6px;
     background-color: var(--primary-color-light);
     position: relative;
-    transition: var(--tran-05);
+    transition: $tran-05;
 }
 
 .sidebarMenu .mode .sun-moon{
@@ -210,7 +264,7 @@ body.dark .mode .sun-moon i.moon{
     opacity: 0;
 }
 
-.sidebarMenu .bottom-content .toggle-switch{
+.sidebarMenu .bottom-content .toggle-switch {
     position: absolute;
     right: 0;
     height: 100%;
@@ -222,13 +276,17 @@ body.dark .mode .sun-moon i.moon{
     cursor: pointer;
 }
 
-.toggle-switch .switch{
+.toggle-switch .switch {
     position: relative;
     height: 22px;
     width: 40px;
     border-radius: 25px;
-    background-color: map-get($dark-mode, text-color-light);
-    transition: var(--tran-05);
+    background-color: map-get($dark-mode, accent-color-light);
+    transition: $tran-05;
+}
+
+body.dark .sidebarMenu .bottom-content .toggle-switch .switch {
+    background-color: map-get($light-mode, accent-color-dark);
 }
 
 .switch::before{
@@ -241,7 +299,7 @@ body.dark .mode .sun-moon i.moon{
     left: 5px;
     transform: translateY(-50%);
     background-color: map-get($dark-mode, body-color-light);
-    transition: var(--tran-04);
+    transition: $tran-04;
 }
 
 body.dark .switch::before{
@@ -251,89 +309,102 @@ body.dark .switch::before{
 .home {
     position: absolute;
     top: 0;
-    top: 0;
-    left: 250px;
+    left: 240px;
     height: 100vh;
-    width: calc(100% - 250px);
-    transition: var(--tran-05);
+    width: calc(100% - 240px);
+    transition: $tran-05;
 }
 
-.home .sidebarText {
+.home .homeTitle{
     font-size: 30px;
     font-weight: 500;
-    color: var(--text-color);
+    color: map-get($light-mode, text-color-dark);
     padding: 12px 60px;
 }
 
-.sidebar.close ~ .home{
+.sidebar.close ~ .home {
     left: 78px;
     height: 100vh;
     width: calc(100% - 78px);
 }
 
-body.dark .home .sidebarText {
+body.dark .home .homeTitle {
     color: map-get($dark-mode, text-color-light);
 }
 
-#title{
-    order: 2;
-    font-family: Poppins;
-    font-size: calc(17px + 0.3vw);  
-    font-weight: 500;
-    color: map-get($light-mode, text-color-dark);
-    margin-bottom: 7px;
+body.dark .home .homeContent .cardContainer .card {
+    background-color: map-get($dark-mode, plus-color-light);
 }
 
-#card-container {
+.cardContainer {
     display: grid;
     justify-items: stretch;
     height: 100%;
-    margin-top: calc(15px + 0.7vw);
-    margin-left: calc(15px + 0.7vw);
-    margin-right: calc(15px + 0.7vw);
+    margin: calc(15px + 0.7vw);
+    padding-bottom: 25px;
     grid-gap: calc(15px + 0.7vw);
     grid-template-columns: repeat(auto-fit, minmax(calc(250px + 8%), 1fr));
 }
 
-#link {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    height: 100%;
-}
-
-.hidden {
-    display: none;
-}
-
-.test{
-    width: 100%;
-    align-self: center;
-    margin-top: 33px;
-}
-
-body.dark .home .card-container .card {
+body.dark .home .cardContainer .card {
     background-color: map-get($dark-mode, accent-color-light);
+    #myChart {
+        justify-self: center;
+    }
+
+    $chartElement:(
+        myChart,
+        myChart1,
+        myChart2,
+        myChart3,
+        myChart4,
+        myChart5,
+        myChart6,
+        myChart7
+    );
+
+    @each $var in $chartElement {
+        ##{$var} text {
+            fill: map-get($dark-mode, text-color-light);
+        }   
+        ##{$var} path {
+            fill: map-get($light-mode, text-color-dark);
+        }
+    }
 }
 
 .card {
-    transition: 0.3s;
+    transition: $tran-03;
     border-radius: calc(7px + 0.1vw);
     text-align: center;
-    background-color: map-get($light-mode, accent-color-dark);
+    background-color: map-get($light-mode, plus-color-dark);
     height: 100%;
+    &:hover {
+        box-shadow: 0 14px 14px 0 rgba(0,0,0,0.2);
+    }
+
+    $chartElement:(
+        myChart,
+        myChart1,
+        myChart2,
+        myChart3,
+        myChart4,
+        myChart5,
+        myChart6,
+        myChart7
+    );
+
+    @each $var in $chartElement {
+        ##{$var} text {
+            fill: map-get($light-mode, text-color-dark);
+        }   
+        ##{$var} path {
+            fill: map-get($light-mode, body-color-dark);
+        }
+    }
 }
 
-.card:hover {
-    box-shadow: 0 14px 14px 0 rgba(0,0,0,0.2);
-}
-
-.card-img {
-    margin-top: 14px;
-    margin-bottom: 7px;
-    width: calc(25% + 0.2vw);
-}
-
-.card-title {
+.cardTitle {
     font-family: Poppins;
     font-size: calc(17px + 0.3vw);
     font-weight: 500;
@@ -342,23 +413,6 @@ body.dark .home .card-container .card {
     overflow-y: hidden;
 }
 
-.card-description {
-    font-family: Poppins;
-    font-size: calc(14px + 0.14vw);
-    margin: 0px 14px 22px 14px;
-    color: map-get($light-mode, text-color-dark);
-} 
-
-.sidebarText {
-    margin-left: 14px;
-    font-size: calc(12px + 0.3vw);
-    color: map-get($light-mode, text-color-dark);
-}
-
-.bx {
-    color: var(--icon-color);
-}
-
-#pageTitle {
-    color: map-get($light-mode, text-color-dark);
+body.dark .home .cardContainer .card .cardTitle {
+    color: map-get($dark-mode, text-color-light);
 }
